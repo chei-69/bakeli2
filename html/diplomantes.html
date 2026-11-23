@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations Diplômantes | Bakeli School of Technology</title>
+
+  <!-- 1) Tailwind CSS en version CDN : aucune installation, aucun fichier .css -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- 2) Les couleurs Bakeli, utilisables ensuite : bg-bakeli-orange, text-bakeli-dark, bg-bakeli-soft -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+
+      <a href="index.html" class="shrink-0">
+        <img src="images/logo.png" alt="Bakeli School of Technology" class="h-10 w-auto">
+      </a>
+
+      <!-- Menu ordinateur -->
+      <nav class="hidden lg:block" aria-label="Menu principal">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li class="group relative py-2">
+            <a href="#" class="text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <li>
+              <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+              </a>
+            </li>
+            <li>
+              <a href="formations-diplomantes.html" class="block px-5 py-3 hover:bg-bakeli-soft bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <li>
+              <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li><a href="coachs.html" class="hover:text-bakeli-orange">Coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+          <li><a href="bourses.html" class="hover:text-bakeli-orange">Bourses</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white hidden lg:inline-flex">Contacter Bakeli</a>
+        <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 hidden lg:inline-flex">S'inscrire</a>
+
+        <!-- Menu mobile (sans JavaScript, avec la balise details) -->
+        <details class="relative lg:hidden">
+          <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+          <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+            <ul class="space-y-3 font-medium">
+              <li><a href="index.html">Accueil</a></li>
+              <li>Formations</li>
+          <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+          <li><a href="formations-diplomantes.html" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+          <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+          <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+              <li><a href="coachs.html">Coachs</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="bourses.html">Bourses</a></li>
+            </ul>
+            <div class="mt-5 flex flex-col gap-3">
+              <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+              <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
+        <div>
+          <h1 class="text-4xl font-extrabold leading-tight text-bakeli-dark md:text-5xl">Découvrez nos formations <span class="text-bakeli-orange">diplômantes</span></h1>
+          <p class="mt-6 text-lg leading-relaxed text-gray-600">La formation de 24 mois inclut un stage pédagogique garanti de 3 mois chaque année. À la fin des 2 ans, un diplôme de Technicien Supérieur, reconnu par le Ministère de la Formation Professionnelle, est remis aux apprenants.</p>
+          <div class="mt-8">
+            <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Démarrer mon inscription</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-3">
+          <li class="rounded-full bg-bakeli-soft px-4 py-2 text-sm font-semibold">Durée : 24 mois</li>
+          <li class="rounded-full bg-bakeli-soft px-4 py-2 text-sm font-semibold">En ligne ou en présentiel</li>
+          </ul>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <img src="images/formation-detail.png" alt="Étudiant au fond rouge, bras croisés" class="w-full max-w-md lg:max-w-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMPETENCES ================= -->
+    <section class="bg-bakeli-soft py-8">
+      <ul class="mx-auto max-w-7xl px-4 lg:px-8 flex flex-wrap justify-center gap-3">
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Intégrer des pages web</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Modéliser une base de données</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Créer des plans marketing</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Concevoir des logos professionnels</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Produire des tableaux et rapports administratifs</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Créer des interfaces modernes, responsives et accessibles</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Gérer et animer des communautés en ligne</li>
+        <li class="rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">Faire de la retouche photo</li>
+      </ul>
+    </section>
+
+    <!-- ================= DOMAINES + CARTES ================= -->
+    <section id="formations" class="mx-auto max-w-7xl px-4 lg:px-8 scroll-mt-24 py-14">
+      <h2 class="text-center text-2xl font-bold text-bakeli-dark md:text-3xl">Dans quel domaine souhaitez-vous vous former ?</h2>
+      <ul class="mt-6 flex flex-wrap justify-center gap-3">
+        <li><a href="#formations" class="rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white">Tous</a></li>
+        <li><a href="#detail-developpement-applications" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Développement d'Applications Informatiques</a></li>
+        <li><a href="#detail-marketing-communication-digitale" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Marketing et Communication digitale</a></li>
+        <li><a href="#detail-infographie" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Infographie</a></li>
+        <li><a href="#detail-bureautique" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Bureautique</a></li>
+        <li><a href="#detail-informatique-de-gestion" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Informatique de Gestion</a></li>
+        <li><a href="#detail-webmaster-reseaux-sociaux" class="rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold hover:border-bakeli-orange hover:text-bakeli-orange">Webmaster &amp; Réseaux sociaux</a></li>
+      </ul>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Développement d'Applications Informatiques</h3>
+          <p class="mt-2 text-sm text-gray-600">Intégrer des pages web et des applications mobiles, modéliser une base de données, déployer des applications en ligne.</p>
+          <a href="#detail-developpement-applications" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Marketing et Communication digitale</h3>
+          <p class="mt-2 text-sm text-gray-600">Créer des plans marketing et un calendrier éditorial, lancer des campagnes emailing, faire du SEO.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li><span class="font-semibold text-bakeli-dark">Diplôme :</span> DTS (Diplôme de Technicien Supérieur)</li>
+          </ul>
+          <a href="#detail-marketing-communication-digitale" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Infographie</h3>
+          <p class="mt-2 text-sm text-gray-600">Créer des affiches, concevoir des logos professionnels et développer une identité visuelle.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li><span class="font-semibold text-bakeli-dark">Diplôme :</span> BTS (Brevet de Technicien Supérieur)</li>
+            <li><span class="font-semibold text-bakeli-dark">Nombre de places :</span> 30</li>
+          </ul>
+          <a href="#detail-infographie" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Bureautique</h3>
+          <p class="mt-2 text-sm text-gray-600">Rédiger des documents administratifs, organiser des réunions, gérer courriers et emails.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li><span class="font-semibold text-bakeli-dark">Diplôme :</span> BTS (Brevet de Technicien Supérieur)</li>
+            <li><span class="font-semibold text-bakeli-dark">Nombre de places :</span> 30</li>
+          </ul>
+          <a href="#detail-bureautique" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Informatique de Gestion</h3>
+          <p class="mt-2 text-sm text-gray-600">Concevoir des bases de données, produire des tableaux de bord, développer des applications de gestion.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li><span class="font-semibold text-bakeli-dark">Diplôme :</span> BTS (Brevet de Technicien Supérieur)</li>
+            <li><span class="font-semibold text-bakeli-dark">Nombre de places :</span> 30</li>
+          </ul>
+          <a href="#detail-informatique-de-gestion" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <span class="w-fit rounded-full bg-bakeli-soft px-3 py-1 text-sm font-semibold text-bakeli-orange">24 mois</span>
+          <h3 class="mt-4 text-xl font-bold text-bakeli-dark">Webmaster &amp; Réseaux sociaux</h3>
+          <p class="mt-2 text-sm text-gray-600">Concevoir et administrer des sites web, animer les réseaux sociaux et optimiser le SEO.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li><span class="font-semibold text-bakeli-dark">Diplôme :</span> BTS (Brevet de Technicien Supérieur)</li>
+            <li><span class="font-semibold text-bakeli-dark">Nombre de places :</span> 30</li>
+          </ul>
+          <a href="#detail-webmaster-reseaux-sociaux" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= DETAIL DE CHAQUE FORMATION ================= -->
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <section id="detail-developpement-applications" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Développement d'Applications Informatiques</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Intégrer des pages web</li>
+              <li>Intégrer des applications mobiles</li>
+              <li>Modéliser une base de données</li>
+              <li>Rédiger des tests unitaires et fonctionnels</li>
+              <li>Rédiger un cahier des charges</li>
+              <li>Déployer des applications en ligne</li>
+              <li>Interagir avec des clients</li>
+              <li>Travailler à plusieurs dans un projet</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <p class="mt-3 text-sm font-semibold text-bakeli-dark">Les langages :</p>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">HTML5</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">CSS3</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">PHP</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">MySQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Dart</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Java</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">JavaScript</li>
+            </ul>
+            <p class="mt-3 text-sm font-semibold text-bakeli-dark">Les frameworks :</p>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Bootstrap</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">React JS</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">React Native</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Laravel</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Flutter</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Développeur web Front end (Spécialité React Js)</li>
+              <li>Développeur web Back end (Spécialité Laravel)</li>
+              <li>Développeur web Back end (Spécialité Django)</li>
+              <li>Développeur web Back end (Spécialité Node Js)</li>
+              <li>Développeur mobile (Spécialité React Native)</li>
+              <li>Développeur mobile (Spécialité Flutter)</li>
+              <li>DevOps</li>
+              <li>Intégrateur web et mobile (React Js, React Native)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction à la Programmation</li>
+            <li>Langages de Programmation</li>
+            <li>Conception d'Interfaces Utilisateur (UI)</li>
+            <li>Développement d'Applications Mobiles</li>
+            <li>Gestion de Projet</li>
+            <li>Tests et Déploiement</li>
+        </ol>
+      </div>
+    </section>
+    <section id="detail-marketing-communication-digitale" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Marketing et Communication digitale</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans, en alternance école / entreprise chaque année</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Diplôme préparé : DTS (Diplôme de Technicien Supérieur)</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Créer des plans marketing</li>
+              <li>Créer un calendrier éditorial</li>
+              <li>Créer des images et vidéos</li>
+              <li>Créer des sites web</li>
+              <li>Rédiger des articles</li>
+              <li>Gérer et animer des communautés en ligne</li>
+              <li>Exécuter des campagnes emailing</li>
+              <li>Faire du référencement naturel (SEO)</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Mailchimp</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google (Analytics, Adwords, Adsense)</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Canva</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">CapCut</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Jitter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Meta Business Suite</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Community manager</li>
+              <li>Rédacteur de contenus</li>
+              <li>Référent Digital</li>
+              <li>Social media manager</li>
+              <li>SEO Specialist</li>
+              <li>Ads Specialist</li>
+              <li>Copywriter, Ghostwriter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction au Marketing Digital</li>
+            <li>Stratégies de Contenu et Marketing de Contenu</li>
+            <li>Réseaux Sociaux et Gestion de Communautés</li>
+            <li>Publicité en Ligne et PPC</li>
+            <li>Analyse et Mesure de la Performance</li>
+            <li>Stratégies Avancées et Tendances Émergentes</li>
+        </ol>
+      </div>
+    </section>
+    <section id="detail-infographie" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Infographie</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans, en alternance école / entreprise chaque année</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Diplôme préparé : BTS (Brevet de Technicien Supérieur)</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Nombre de places : 30</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Créer des affiches publicitaires</li>
+              <li>Concevoir des logos professionnels</li>
+              <li>Réaliser des visuels pour les réseaux sociaux</li>
+              <li>Développer une identité visuelle</li>
+              <li>Faire de la retouche photo</li>
+              <li>Réaliser des supports de communication visuelle</li>
+              <li>Concevoir des maquettes graphiques</li>
+              <li>Préparer des contenus visuels pour impression et digital</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Canva</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Figma</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">GIMP</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Inkscape</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">CapCut</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Infographiste</li>
+              <li>Designer de contenus réseaux sociaux</li>
+              <li>Graphiste freelance</li>
+              <li>Assistant communication visuelle</li>
+              <li>Créateur d'identité visuelle</li>
+              <li>Designer publicitaire</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction au Design Graphique</li>
+            <li>Théorie des Couleurs et Typographie</li>
+            <li>Création de Visuels Publicitaires</li>
+            <li>Création de Logos et Identité Visuelle</li>
+            <li>Retouche Photo et Design Digital</li>
+            <li>Projet Final et Insertion Professionnelle</li>
+        </ol>
+      </div>
+    </section>
+    <section id="detail-bureautique" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Bureautique</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans, en alternance chaque année école / entreprise</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Diplôme préparé : BTS (Brevet de Technicien Supérieur)</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Nombre de places : 30</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Rédiger des documents administratifs et professionnels</li>
+              <li>Utiliser les outils bureautiques professionnels</li>
+              <li>Organiser et gérer des réunions</li>
+              <li>Gérer les courriers et emails professionnels</li>
+              <li>Assurer l'accueil physique et téléphonique</li>
+              <li>Organiser et classer des documents administratifs</li>
+              <li>Planifier des activités et gérer un agenda</li>
+              <li>Produire des tableaux et rapports administratifs</li>
+              <li>Collaborer efficacement dans un environnement professionnel</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Docs</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Forms</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Slides</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Sheets</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Assistant(e) administratif(ve)</li>
+              <li>Secrétaire bureautique</li>
+              <li>Assistant(e) de direction</li>
+              <li>Agent administratif</li>
+              <li>Gestionnaire de bureau</li>
+              <li>Assistant(e) RH</li>
+              <li>Archiviste administratif</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction au Secrétariat Bureautique</li>
+            <li>Communication Professionnelle</li>
+            <li>Bureautique Professionnelle</li>
+            <li>Gestion Administrative et Organisation</li>
+            <li>Outils Collaboratifs et Numériques</li>
+            <li>Insertion Professionnelle et Projet Final</li>
+        </ol>
+      </div>
+    </section>
+    <section id="detail-informatique-de-gestion" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Informatique de Gestion</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans, en alternance école / entreprise chaque année</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Diplôme préparé : BTS (Brevet de Technicien Supérieur)</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Nombre de places : 30</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Analyser les besoins informatiques d'une entreprise</li>
+              <li>Concevoir et gérer des bases de données</li>
+              <li>Utiliser les logiciels de gestion et les outils bureautiques professionnels</li>
+              <li>Produire des tableaux de bord et des rapports de gestion</li>
+              <li>Traiter, organiser et sécuriser les données</li>
+              <li>Participer à la mise en place et au suivi d'un système d'information</li>
+              <li>Développer des applications et solutions numériques adaptées</li>
+              <li>Assurer la maintenance et l'assistance aux utilisateurs</li>
+              <li>Collaborer efficacement dans un environnement professionnel</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Microsoft Excel et Google Sheets</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Microsoft Access et MySQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive, Docs et Forms</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Power BI ou un outil de visualisation de données</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Outils de gestion de projet et de travail collaboratif</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Environnements de développement et outils de gestion de versions</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Assistant(e) informatique de gestion</li>
+              <li>Analyste-programmeur(se)</li>
+              <li>Gestionnaire de bases de données junior</li>
+              <li>Technicien(ne) support informatique</li>
+              <li>Assistant(e) chef de projet informatique</li>
+              <li>Gestionnaire de système d'information</li>
+              <li>Développeur(se) d'applications de gestion</li>
+              <li>Technicien(ne) en reporting et tableaux de bord</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction à l'informatique de gestion</li>
+            <li>Environnement professionnel et analyse des besoins</li>
+            <li>Bureautique et outils de gestion</li>
+            <li>Bases de données et gestion de l'information</li>
+            <li>Développement d'applications de gestion</li>
+            <li>Reporting, systèmes d'information et projet final</li>
+        </ol>
+      </div>
+    </section>
+    <section id="detail-webmaster-reseaux-sociaux" class="scroll-mt-24 border-t border-gray-200 py-14">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <h2 class="text-2xl font-extrabold text-bakeli-dark md:text-3xl">Webmaster &amp; Réseaux sociaux</h2>
+        <a href="#formations" class="text-sm font-semibold text-bakeli-orange hover:underline">&uarr; Retour aux formations</a>
+      </div>
+      <ul class="mt-4 flex flex-wrap gap-2"><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Durée : 2 ans, en alternance chaque année école / entreprise</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Diplôme préparé : BTS (Brevet de Technicien Supérieur)</li><li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Nombre de places : 30</li></ul>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez apprendre à :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Concevoir, créer et administrer des sites web professionnels</li>
+              <li>Maîtriser les bases du développement et de l'intégration web</li>
+              <li>Créer des interfaces modernes, responsives et accessibles</li>
+              <li>Gérer et mettre à jour des sites avec des CMS</li>
+              <li>Élaborer une stratégie de communication sur les réseaux sociaux</li>
+              <li>Créer des contenus visuels, rédactionnels et audiovisuels</li>
+              <li>Planifier et publier des contenus sur les plateformes sociales</li>
+              <li>Analyser les statistiques d'un site et des réseaux sociaux</li>
+              <li>Optimiser la visibilité d'une marque grâce au SEO</li>
+              <li>Collaborer efficacement dans un environnement professionnel</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous allez utiliser :</h3>
+            <ul class="mt-2 flex flex-wrap gap-2">
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">HTML, CSS et JavaScript</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">WordPress et autres CMS</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Figma et Canva</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Analytics et Google Search Console</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Meta Business Suite, Facebook, Instagram, LinkedIn et TikTok</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Outils de planification et de gestion des contenus</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive, Docs et Sheets</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-bakeli-dark">Vous pouvez devenir :</h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-gray-600">
+              <li>Webmaster</li>
+              <li>Développeur(se) web junior</li>
+              <li>Intégrateur(trice) web</li>
+              <li>Community Manager</li>
+              <li>Social Media Manager</li>
+              <li>Rédacteur(trice) web</li>
+              <li>Chargé(e) de communication digitale</li>
+              <li>Créateur(trice) de contenus numériques</li>
+              <li>Assistant(e) chef de projet digital</li>
+              <li>Consultant(e) SEO junior</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl bg-bakeli-soft p-6">
+        <h3 class="text-lg font-bold text-bakeli-dark">Modules du cours :</h3>
+        <ol class="mt-3 grid list-decimal gap-x-10 gap-y-2 pl-5 text-gray-700 md:grid-cols-2">
+            <li>Introduction au Web et à la Communication digitale</li>
+            <li>Conception et intégration de sites web</li>
+            <li>CMS, création de contenus et gestion de sites</li>
+            <li>Réseaux sociaux et stratégie de contenu</li>
+            <li>Référencement, publicité digitale et analyse des performances</li>
+            <li>Projet digital et insertion professionnelle</li>
+        </ol>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-100 text-gray-700">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+
+      <div>
+        <img src="images/logo.png" alt="Bakeli" class="h-10 w-auto">
+        <p class="mt-4 text-sm leading-relaxed">
+          Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+          Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+          <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li><a href="coachs.html" class="hover:text-bakeli-orange">Nos coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+          <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+          <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
+    <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
+  </a>
+
+</body>
+</html>
