@@ -1,0 +1,197 @@
+    <!DOCTYPE html>
+    <html lang="fr" class="scroll-smooth">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos coachs | Bakeli School of Technology</title>
+
+    <!-- 1) Tailwind CSS en version CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <!-- 2) Les couleurs Bakeli -->
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+            }
+            }
+        }
+        }
+    </script>
+    </head>
+    <body class="bg-white font-sans text-gray-800 antialiased">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+
+        <a href="index.html" class="shrink-0">
+            <img src="" alt="Bakeli School of Technology" class="h-10 w-auto">
+        </a>
+
+        <!-- Menu ordinateur -->
+        <nav class="hidden lg:block" aria-label="Menu principal">
+            <ul class="flex items-center gap-8 font-medium">
+            <li><a href="index.html" class="text-bakeli-orange">Accueil</a></li>
+            <li class="group relative py-2">
+                <a href="#" class="hover:text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+                <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <li>
+                <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                    <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                    <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+                </a>
+                </li>
+                <li>
+                <a href="formations-diplomantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                    <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                    <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+                </a>
+                </li>
+                <li>
+                <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                    <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                    <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+                </a>
+                </li>
+                </ul>
+            </li>
+            <li class="group relative py-2">
+                <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+                <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <li>
+                <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                    <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                    <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+                </a>
+                </li>
+                </ul>
+            </li>
+            <li><a href="coachs.html" class="hover:text-bakeli-orange">Coachs</a></li>
+            <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+            <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+            <li><a href="bourses.html" class="hover:text-bakeli-orange">Bourses</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white hidden lg:inline-flex">Contacter Bakeli</a>
+            <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 hidden lg:inline-flex">S'inscrire</a>
+
+            <!-- Menu mobile (sans JavaScript, avec la balise details) -->
+            <details class="relative lg:hidden">
+            <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+            <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+                <ul class="space-y-3 font-medium">
+                <li><a href="index.html">Accueil</a></li>
+                <li>Formations</li>
+            <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+            <li><a href="formations-diplomantes.html" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+            <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+            <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+                <li><a href="coachs.html">Coachs</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="bourses.html">Bourses</a></li>
+                </ul>
+                <div class="mt-5 flex flex-col gap-3">
+                <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+                <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+                </div>
+            </div>
+            </details>
+        </div>
+        </div>
+    </header>
+
+    <!-- ================= CONTENU PRINCIPAL ================= -->
+    <main>
+        <section class="bg-bakeli-soft">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8 py-14 text-center lg:py-20">
+            <nav aria-label="Fil d'Ariane" class="text-sm text-gray-500">
+            <a href="index.html" class="hover:text-bakeli-orange">Accueil</a>
+            <span class="mx-2">&rsaquo;</span>
+            <span class="text-bakeli-dark">Coachs</span>
+            </nav>
+            <h1 class="mt-4 text-4xl font-extrabold text-bakeli-dark md:text-5xl">Nos <span class="text-bakeli-orange">coachs</span></h1>
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">Faites connaissance avec les experts qui vous accompagnent dans votre réussite chez Bakeli.</p>
+        </div>
+        </section>
+
+        <!-- ================= LISTE DES COACHS ================= -->
+        <section class="mx-auto max-w-7xl px-4 lg:px-8 py-16">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            
+            <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://www.bakeli.tech/storage/coachsImages/01KMG3589GRBTMVE256692112Z.jpg" alt="Photo de Mamadou BARRY" class="aspect-[4/5] w-full object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-bakeli-dark">Mamadou BARRY</h3>
+                <p class="mt-1 text-sm font-semibold text-bakeli-orange">Coach &amp; Développeur FullStack</p>
+                <a href="https://www.linkedin.com/in/mamadou-barry-ba35772a4/" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white mt-4">LinkedIn</a>
+            </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://www.bakeli.tech/storage/coachsImages/01KN0BXBZMA3EZ8D539F4V9XF5.jpg" alt="Photo de Ousmane Sidi DIALLO" class="aspect-[4/5] w-full object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-bakeli-dark">Ousmane Sidi DIALLO</h3>
+                <p class="mt-1 text-sm font-semibold text-bakeli-orange">Coach et AI Engineer</p>
+                <a href="https://www.linkedin.com/in/ousmane-sidi-diallo-8a8a14229/" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white mt-4">LinkedIn</a>
+            </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://www.bakeli.tech/storage/coachsImages/01KRH6PEQQDD9T57FJ5PBFRDJJ.jpg" alt="Photo de Mouhamed Ahmadou BA" class="aspect-[4/5] w-full object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-bakeli-dark">Mouhamed Ahmadou BA</h3>
+                <p class="mt-1 text-sm font-semibold text-bakeli-orange">Coach en Développement Web et Web Mobile</p>
+            </div>
+            </article>
+
+        </div>
+        </section>
+    </main>
+   <footer class="bg-gray-100 text-gray-700">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+
+      <div>
+        <img src="images/logo." alt="Bakeli" class="h-10 w-auto">
+        <p class="mt-4 text-sm leading-relaxed">
+          Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+          Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+          <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li><a href="coachs.html" class="hover:text-bakeli-orange">Nos coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+          <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+          <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
+  </footer>
+
+    </body>
+    </html>
