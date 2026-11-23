@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>radar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{teal:"#009688",orange:"#FFB74D","orange-fonce":"#FF9800"},fontFamily:{outfit:["Outfit","sans-serif"],inter:["Inter","sans-serif"]}}}}</script></head>
+<body class="bg-gray-50 font-inter text-gray-800">
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white px-6 py-3 shadow-md lg:px-16">
+  <a href="index.html" class="flex items-center gap-2 text-teal"><i class="fa-solid fa-spinner text-orange-fonce"></i><span class="font-medium">Bakeli Work</span></a>
+  <nav><ul class="hidden items-center gap-8 text-sm md:flex">
+    <li><a href="index.html" class="hover:text-teal">Accueil</a></li>
+    <li><a href="projets.html" class="hover:text-teal">Projets</a></li>
+    <li><a href="offre.html" class="hover:text-teal">Offres d'emploi</a></li>
+    <li><a href="radar.html" class="border-b-2 border-teal pb-1">Bakeli Radar</a></li>
+    <li><a href="insertion.html" class="hover:text-teal">Insertion</a></li>
+    <li class="group relative"><button type="button" class="flex items-center gap-1 hover:text-teal">Explorer <i class="fa-solid fa-chevron-down text-xs"></i></button>
+      <div class="absolute left-0 top-full hidden w-44 pt-3 group-hover:block group-focus-within:block"><div class="rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+        <a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Entreprises</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Etablissements</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Templates</a></div></div></li>
+  </ul></nav>
+  <button  type="button" href= inscription.html class="rounded-full bg-orange-fonce px-6 py-2.5 text-sm font-medium text-white hover:opacity-90" >Se connecter</button>
+</header>
+
+<section class="grid items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-20">
+  <div>
+    <h1 class="text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">Trouvez rapidement les <span class="text-orange">opportunités</span> qui vous correspondent.</h1>
+    <p class="mt-5 max-w-xl text-gray-500">Bakeli Radar vous aide à rechercher et filtrer rapidement les offres de stage et d’emploi par titre, région et niveau d’expérience. Découvrez les opportunités qui correspondent à votre profil et postulez directement en quelques clics.</p>
+    <p class="mt-6 text-sm font-medium">Fiable pour plus de 15 000 utilisateurs dans le monde depuis 2024</p>
+    <p class="mt-2 flex items-center gap-2 text-sm"><span class="text-xl text-orange">★</span>4.9 / 200 Avis</p>
+  </div>
+  <div class="mx-auto w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl">
+    <img src="logo-bakeli.png" alt="Bakeli" class="mb-3 h-8">
+    <h3 class="text-xl font-semibold">Commercial</h3>
+    <p class="mt-1 text-sm text-teal">Nom de entreprise : ETS RALF</p>
+    <p class="mt-3 text-sm"><strong>Région :</strong> Hann Mariste</p>
+    <p class="text-sm"><strong>Provenance :</strong> Emploi Dakar</p>
+    <a href="#" class="mt-5 inline-block rounded-full bg-orange px-6 py-2 text-sm font-semibold text-white hover:bg-orange-fonce">Postuler</a>
+  </div>
+</section>
+<section class="px-6 pb-14 lg:px-20">
+  <p class="text-center text-sm font-medium text-gray-500">OFFRES</p>
+  <h2 class="mb-6 text-center text-3xl font-bold text-slate-900">Offres d’emploi récentes</h2>
+  <div class="mb-6 flex flex-wrap items-center justify-between gap-3 text-sm">
+    <p>Affichage de <strong>1</strong> à <strong>20</strong> sur <strong>306</strong> résultats</p>
+    <select aria-label="Trier les offres" class="rounded-lg border border-gray-300 bg-white px-3 py-2"><option>Plus récent</option><option>Plus ancien</option></select>
+  </div>
+  <div class="grid gap-6 md:grid-cols-2"><article class="relative rounded-2xl bg-white p-6 shadow-md"><span class="absolute -top-3 right-6 rounded-full bg-teal px-4 py-1 text-xs text-white">un an</span>
+<div class="flex items-center gap-4"><img src="logo-sos.png" alt="ONG SOS" class="size-14 object-contain"><div><h3 class="font-semibold">ONG SOS Village d'Enfants</h3><p class="text-sm text-gray-600">Coordinateur/ trice régional(e) en finance &amp; contrôle</p><p class="text-sm text-gray-400">Provenance: Emploi Dakar</p></div></div>
+<div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t pt-4"><div class="flex flex-wrap gap-2 text-xs text-gray-600"><span class="rounded-full bg-gray-100 px-3 py-1">Autre</span><span class="rounded-full bg-gray-100 px-3 py-1">il y a un an</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span></div>
+<a href="#" class="rounded-full bg-orange px-6 py-2 text-sm font-semibold text-white hover:bg-orange-fonce">Postuler</a></div></article><article class="relative rounded-2xl bg-white p-6 shadow-md"><span class="absolute -top-3 right-6 rounded-full bg-teal px-4 py-1 text-xs text-white">un an</span>
+<div class="flex items-center gap-4"><img src="logo-sos.png" alt="ONG SOS" class="size-14 object-contain"><div><h3 class="font-semibold">ONG SOS Village d'Enfants</h3><p class="text-sm text-gray-600">Coordinateur/ trice régional(e) en finance &amp; contrôle</p><p class="text-sm text-gray-400">Provenance: Emploi Dakar</p></div></div>
+<div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t pt-4"><div class="flex flex-wrap gap-2 text-xs text-gray-600"><span class="rounded-full bg-gray-100 px-3 py-1">Autre</span><span class="rounded-full bg-gray-100 px-3 py-1">il y a un an</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span></div>
+<a href="#" class="rounded-full bg-orange px-6 py-2 text-sm font-semibold text-white hover:bg-orange-fonce">Postuler</a></div></article><article class="relative rounded-2xl bg-white p-6 shadow-md"><span class="absolute -top-3 right-6 rounded-full bg-teal px-4 py-1 text-xs text-white">un an</span>
+<div class="flex items-center gap-4"><img src="logo-sos.png" alt="ONG SOS" class="size-14 object-contain"><div><h3 class="font-semibold">ONG SOS Village d'Enfants</h3><p class="text-sm text-gray-600">Coordinateur/ trice régional(e) en finance &amp; contrôle</p><p class="text-sm text-gray-400">Provenance: Emploi Dakar</p></div></div>
+<div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t pt-4"><div class="flex flex-wrap gap-2 text-xs text-gray-600"><span class="rounded-full bg-gray-100 px-3 py-1">Autre</span><span class="rounded-full bg-gray-100 px-3 py-1">il y a un an</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span></div>
+<a href="#" class="rounded-full bg-orange px-6 py-2 text-sm font-semibold text-white hover:bg-orange-fonce">Postuler</a></div></article><article class="relative rounded-2xl bg-white p-6 shadow-md"><span class="absolute -top-3 right-6 rounded-full bg-teal px-4 py-1 text-xs text-white">un an</span>
+<div class="flex items-center gap-4"><img src="logo-sos.png" alt="ONG SOS" class="size-14 object-contain"><div><h3 class="font-semibold">ONG SOS Village d'Enfants</h3><p class="text-sm text-gray-600">Coordinateur/ trice régional(e) en finance &amp; contrôle</p><p class="text-sm text-gray-400">Provenance: Emploi Dakar</p></div></div>
+<div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t pt-4"><div class="flex flex-wrap gap-2 text-xs text-gray-600"><span class="rounded-full bg-gray-100 px-3 py-1">Autre</span><span class="rounded-full bg-gray-100 px-3 py-1">il y a un an</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span><span class="rounded-full bg-gray-100 px-3 py-1">Non spécifié</span></div>
+<a href="#" class="rounded-full bg-orange px-6 py-2 text-sm font-semibold text-white hover:bg-orange-fonce">Postuler</a></div></article></div>
+</section>
+</body>
+</html>

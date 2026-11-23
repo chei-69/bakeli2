@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Événements | Bakeli School of Technology</title>
+ 
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+ 
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+ 
+      <a href="index.html" class="shrink-0">
+        <img src="https://www.bakeli.tech/build/assets/logo-4ddf30fa.png" alt="Bakeli School of Technology" class="h-10 w-auto">
+      </a>
+ 
+      <nav class="hidden lg:block" aria-label="Menu principal">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <li>
+                <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                  <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.bakeli.tech/formations/formations-diplomantes" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                  <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                  <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <li>
+                <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                  <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="https://www.bakeli.tech/nos-coachs" class="hover:text-bakeli-orange">Coachs</a></li>
+          <li><a href="evenements.html" class="text-bakeli-orange">Événements</a></li>
+          <li><a href="https://www.bakeli.tech/blog" class="hover:text-bakeli-orange">Blog</a></li>
+          <li><a href="https://www.bakeli.tech/bourses" class="hover:text-bakeli-orange">Bourses</a></li>
+        </ul>
+      </nav>
+ 
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="hidden lg:inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+        <a href="https://www.bakeli.tech/inscription" class="hidden lg:inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+ 
+        <details class="relative lg:hidden">
+          <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+          <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+            <ul class="space-y-3 font-medium">
+              <li><a href="index.html">Accueil</a></li>
+              <li>Formations</li>
+              <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+              <li><a href="https://www.bakeli.tech/formations/formations-diplomantes" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+              <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+              <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+              <li><a href="https://www.bakeli.tech/nos-coachs">Coachs</a></li>
+              <li><a href="evenements.html" class="text-bakeli-orange">Événements</a></li>
+              <li><a href="https://www.bakeli.tech/blog">Blog</a></li>
+              <li><a href="https://www.bakeli.tech/bourses">Bourses</a></li>
+            </ul>
+            <div class="mt-5 flex flex-col gap-3">
+              <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+              <a href="https://www.bakeli.tech/inscription" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+ 
+  <main>
+ 
+    <!-- ================= TITRE ================= -->
+    <section class="bg-bakeli-soft py-14">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 text-center">
+        <h1 class="text-4xl font-extrabold text-bakeli-dark md:text-5xl">Nos <span class="text-bakeli-orange">événements</span></h1>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">Webinaires, ateliers et masterclasses : retrouvez les rendez-vous organisés par Bakeli.</p>
+      </div>
+    </section>
+ 
+    <!-- ================= LISTE DES EVENEMENTS ================= -->
+    <section class="mx-auto max-w-7xl px-4 lg:px-8 py-16">
+      <div class="grid gap-8 md:grid-cols-2">
+ 
+        <!-- Événement 1 -->
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="flex items-center justify-between">
+            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">Passé</span>
+            <p class="text-sm font-semibold text-bakeli-orange">30 janv. 2026</p>
+          </div>
+          <h2 class="mt-4 text-xl font-bold text-bakeli-dark">Webinaire sur le Développement Web Mobile en ligne</h2>
+          <p class="mt-4 text-sm text-gray-500"><span aria-hidden="true">📍</span> En ligne</p>
+          <a href="https://www.bakeli.tech/events/012026110102-" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">Voir l'événement &rarr;</a>
+        </article>
+ 
+        <!-- Événement 2 -->
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="flex items-center justify-between">
+            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">Passé</span>
+            <p class="text-sm font-semibold text-bakeli-orange">17 mai 2025</p>
+          </div>
+          <h2 class="mt-4 text-xl font-bold text-bakeli-dark">Marketing Digital : Concepts et Évolutions</h2>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Plongez dans l'univers passionnant du Marketing Digital avec notre expert Mamadou Moustapha SAMB.</p>
+          <p class="mt-3 text-sm font-semibold text-bakeli-dark">Ce que vous allez découvrir :</p>
+          <ul class="mt-1 list-disc space-y-1 pl-5 text-sm text-gray-600">
+            <li>Développer une vision stratégique du marketing digital</li>
+            <li>Comprendre les outils et techniques clés</li>
+            <li>Se préparer aux métiers du marketing numérique ou booster la communication digitale d'une entreprise</li>
+          </ul>
+          <p class="mt-4 text-sm text-gray-500"><span aria-hidden="true">📍</span> UCAD - FASEG<br><span aria-hidden="true">🕘</span> Samedi 17 mai, à partir de 09h00</p>
+          <a href="https://www.bakeli.tech/events/052025120552-" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">Voir l'événement &rarr;</a>
+        </article>
+ 
+        <!-- Événement 3 -->
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="flex items-center justify-between">
+            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">Passé</span>
+            <p class="text-sm font-semibold text-bakeli-orange">09 mai 2025</p>
+          </div>
+          <h2 class="mt-4 text-xl font-bold text-bakeli-dark">Parler aux bases de données : apprendre à manipuler vos données comme un pro avec SQL</h2>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Un atelier de formation en ligne animé par le coach Ousmane DIALLO, Data Scientist &amp; Backend Web Developer. 100% pratique, accessible à tous, pour booster vos compétences en analyse et traitement de données.</p>
+          <p class="mt-4 text-sm text-gray-500"><span aria-hidden="true">📍</span> Google Meet<br><span aria-hidden="true">🕘</span> Vendredi 09 mai, 15h30</p>
+          <a href="https://www.bakeli.tech/events/052025090528-" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">Voir l'événement &rarr;</a>
+        </article>
+ 
+        <!-- Événement 4 -->
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div class="flex items-center justify-between">
+            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">Passé</span>
+            <p class="text-sm font-semibold text-bakeli-orange">29 janv. 2025</p>
+          </div>
+          <h2 class="mt-4 text-xl font-bold text-bakeli-dark">Comment trouver et garder un stage au Sénégal ?</h2>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Masterclass animée par Abdoul Khadre Diallo, CEO de Volkeno/Bakeli, avec des astuces concrètes pour décrocher un stage et le conserver.</p>
+          <p class="mt-3 text-sm font-semibold text-bakeli-dark">Vous découvrirez :</p>
+          <ul class="mt-1 list-disc space-y-1 pl-5 text-sm text-gray-600">
+            <li>Les erreurs à éviter</li>
+            <li>Les qualités recherchées par les recruteurs</li>
+            <li>Comment transformer un stage en tremplin professionnel</li>
+          </ul>
+          <p class="mt-4 text-sm text-gray-500"><span aria-hidden="true">📍</span> ISEP Thiès ou en direct sur Google Meet<br><span aria-hidden="true">🕘</span> 29 janvier 2025, 09h00</p>
+          <a href="https://www.bakeli.tech/events/012025030145-" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">Voir l'événement &rarr;</a>
+        </article>
+ 
+      </div>
+    </section>
+ 
+    <!-- ================= APPEL A L'ACTION ================= -->
+    <section class="bg-bakeli-soft py-16 text-center">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Cours en ligne et en présentiel</p>
+        <h2 class="mt-2 text-3xl font-extrabold text-bakeli-dark">Prêt à rejoindre l'aventure ?</h2>
+        <p class="mt-4 text-gray-600">Inscrivez-vous dès aujourd'hui et transformez votre avenir.</p>
+        <div class="mt-8">
+          <a href="https://www.bakeli.tech/inscription" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Nous rejoindre</a>
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-100 text-gray-700">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+      <div>
+        <img src="https://www.bakeli.tech/build/assets/logo-4ddf30fa.png" alt="Bakeli" class="h-10 w-auto">
+        <p class="mt-4 text-sm leading-relaxed">
+          Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+          Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+          <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li><a href="https://www.bakeli.tech/nos-coachs" class="hover:text-bakeli-orange">Nos coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="https://www.bakeli.tech/blog" class="hover:text-bakeli-orange">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+          <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+          <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
+  </footer>
+ 
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
+    <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
+  </a>
+ 
+</body>
+</html>
+ 

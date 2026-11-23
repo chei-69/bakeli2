@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>offres</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{teal:"#009688",orange:"#FFB74D","orange-fonce":"#FF9800"},fontFamily:{outfit:["Outfit","sans-serif"],inter:["Inter","sans-serif"]}}}}</script></head>
+<body class="bg-gray-50 font-inter text-gray-800">
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white px-6 py-3 shadow-md lg:px-16">
+  <a href="index.html" class="flex items-center gap-2 text-teal"><i class="fa-solid fa-spinner text-orange-fonce"></i><span class="font-medium">Bakeli Work</span></a>
+  <nav><ul class="hidden items-center gap-8 text-sm md:flex">
+    <li><a href="index.html" class="hover:text-teal">Accueil</a></li>
+    <li><a href="projets.html" class="hover:text-teal">Projets</a></li>
+    <li><a href="offres.html" class="border-b-2 border-teal pb-1">Offres d'emploi</a></li>
+    <li><a href="radar.html" class="hover:text-teal">Bakeli Radar</a></li>
+    <li><a href="insertion.html" class="hover:text-teal">Insertion</a></li>
+    <li class="group relative"><button type="button" class="flex items-center gap-1 hover:text-teal">Explorer <i class="fa-solid fa-chevron-down text-xs"></i></button>
+      <div class="absolute left-0 top-full hidden w-44 pt-3 group-hover:block group-focus-within:block"><div class="rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+        <a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Entreprises</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Etablissements</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Templates</a></div></div></li>
+  </ul></nav>
+  <button type="button" class="rounded-full bg-orange-fonce px-6 py-2.5 text-sm font-medium text-white hover:opacity-90">Se connecter</button>
+</header>
+
+<section class="grid items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-20">
+  <div>
+    <h1 class="text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">Trouvez le <span class="text-orange">stage idéal</span> et développez vos <span class="text-orange">compétences</span> professionnelles.</h1>
+    <p class="mt-5 max-w-xl text-gray-500">Parcourez des centaines d’opportunités adaptées à vos compétences et à vos ambitions. Postulez facilement et boostez votre expérience professionnelle.</p>
+    <div class="mt-6 flex flex-wrap items-center gap-6 text-sm">
+      <div class="flex items-center gap-3"><div class="flex -space-x-3"><img src="images/image8.avif" alt="" class="size-10 rounded-full border-2 border-white object-cover"><img src="images/image9.avif" alt="" class="size-10 rounded-full border-2 border-white object-cover"><img src="images/image10.avif" alt="" class="size-10 rounded-full border-2 border-white object-cover"></div><strong>+31K Talents</strong></div>
+      <div class="flex items-center gap-2"><span class="relative grid size-10 place-items-center text-teal"><i class="fa-solid fa-certificate text-4xl opacity-40"></i><i class="fa-solid fa-check absolute text-sm"></i></span><strong>Profils vérifiés</strong></div>
+    </div>
+    <a href="#" class="mt-8 inline-block rounded-full bg-orange px-8 py-3 font-semibold text-white shadow hover:bg-orange-fonce">Rechercher un emploi</a>
+  </div>
+  <div class="relative mx-auto flex h-80 w-full max-w-md items-end justify-center lg:h-96">
+    <span class="absolute bottom-0 h-72 w-72 rounded-full bg-teal"></span>
+    <img src="images/image7.png" alt="Étudiante souriante qui pointe du doigt" class="relative h-full object-contain">
+    <span class="absolute right-4 top-6 size-10 rounded-full bg-orange"></span>
+    <span class="absolute left-4 top-10 size-8 rounded-full bg-orange-fonce"></span>
+  </div>
+</section>
+
+<article class="relative mx-6 mb-10 rounded-2xl bg-white p-6 shadow-lg lg:mx-20">
+  <span class="absolute -top-3 right-6 rounded-full bg-teal px-4 py-1 text-xs font-medium text-white">il y a un mois</span>
+  <div class="flex items-center gap-4"><img src="images/logos/volkeno.png" alt="Logo Volkeno" class="size-16 rounded-xl object-contain ring-1 ring-gray-200">
+    <div><h3 class="text-lg font-semibold">Volkeno</h3><p class="text-sm text-gray-500">BAKELI RECRUTE 16 COMMERCIAUX TERRAIN</p></div></div>
+  <div class="mt-5 flex flex-wrap items-center justify-between gap-4 border-t pt-4">
+    <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+      <li><i class="fa-solid fa-briefcase mr-1 text-teal"></i>STAGE</li>
+      <li><i class="fa-regular fa-clock mr-1 text-teal"></i>il y a un mois</li>
+      <li><i class="fa-regular fa-money-bill-1 mr-1 text-teal"></i>Salaire non défini</li>
+      <li><i class="fa-solid fa-location-dot mr-1 text-teal"></i>Hlm Grand Yoff</li></ul>
+    <a href="#" class="rounded-full border border-teal px-5 py-2 text-sm font-medium text-teal transition hover:bg-teal hover:text-white">Détails de l'offre</a>
+  </div>
+</article>
+<footer class="bg-slate-900 px-6 py-10 text-sm text-gray-300 lg:px-20">
+<div class="grid gap-8 md:grid-cols-2">
+<div><a href="index.html" class="mb-3 flex items-center gap-2 text-lg text-white"><i class="fa-solid fa-spinner text-orange-fonce"></i><span>Bakeli Work</span></a>
+<p class="max-w-md leading-relaxed">Bakeli Work est un service mis en place par Bakeli pour accompagner les entrepreneurs dans l'accès à des services digitaux (conception de logos, affiches, sites web et applications) à des prix très compétitifs et avec une grande flexibilité. Seuls les Bakelistes sont habilités à postuler pour réaliser ces prestations.</p></div>
+<div class="space-y-2"><h3 class="font-semibold text-white">Nous contacter</h3>
+<p>Hlm Grand Yoff Villa n°241 Près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</p>
+<p>TEL : <a href="tel:+221785461515" class="hover:text-orange">+221 78 546 15 51</a></p>
+<p>MAIL : <a href="mailto:contact@bakeli.tech" class="hover:text-orange">contact@bakeli.tech</a></p></div></div>
+<p class="mt-8 border-t border-white/10 pt-5 text-center">© Copyright <strong>Bakeli 2025.</strong> Tous droits réservés.</p></footer>
+</body>
+</html>

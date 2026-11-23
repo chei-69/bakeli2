@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakeli Work</title>
+
+    <!-- Police Outfit + Font Awesome (icônes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+
+    <!-- Tailwind en CDN : plus besoin de style2.css -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 flex items-center justify-between bg-white px-4 py-3 shadow lg:px-8">
+        <a class="flex items-center gap-2 text-xl font-bold text-bakeli-dark" href="#">
+            <i class="fa-solid fa-spinner text-bakeli-orange"></i>
+            <span>Bakeli Work</span>
+        </a>
+
+        <!-- Menu ordinateur -->
+        <nav class="hidden lg:block" aria-label="Navigation principale">
+            <ul class="flex items-center gap-8 font-medium">
+                <li><a href="index.html" class="text-bakeli-orange">Accueil</a></li>
+                <li><a href="#" class="hover:text-bakeli-orange">Projets</a></li>
+                <li><a href="offre.html" class="hover:text-bakeli-orange">Offres d'emploi</a></li>
+                <li><a href="radar.html" class="hover:text-bakeli-orange">Bakeli Radar</a></li>
+                <li class="relative">
+                    <button type="button" id="btn-explorer" aria-expanded="false" aria-controls="panneau" class="font-medium hover:text-bakeli-orange">
+                        Explorer <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <!-- hidden = caché, le JS enlève/remet cette classe -->
+                    <div id="panneau" class="absolute left-0 top-full mt-3 hidden w-48 rounded-xl bg-white py-2 shadow-xl ring-1 ring-black/5">
+                        <a href="#" class="block px-5 py-2 hover:bg-bakeli-soft">Entreprises</a>
+                        <a href="#" class="block px-5 py-2 hover:bg-bakeli-soft">Etablissements</a>
+                        <a href="#" class="block px-5 py-2 hover:bg-bakeli-soft">Templates</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center gap-3">
+            <button type="button" class="rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">Se connecter</button>
+
+            <!-- Menu mobile (sans JS, avec <details>) -->
+            <details class="relative lg:hidden">
+                <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+                <ul class="absolute right-0 top-full mt-3 w-60 space-y-3 rounded-xl bg-white p-5 font-medium shadow-xl ring-1 ring-black/5">
+                    <li><a href="index.html" class="text-bakeli-orange">Accueil</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="offre.html">Offres d'emploi</a></li>
+                    <li><a href="radar.html">Bakeli Radar</a></li>
+                    <li class="pt-2 text-sm text-gray-500">Explorer</li>
+                    <li><a href="#" class="pl-4 text-gray-600">Entreprises</a></li>
+                    <li><a href="#" class="pl-4 text-gray-600">Etablissements</a></li>
+                    <li><a href="#" class="pl-4 text-gray-600">Templates</a></li>
+                </ul>
+            </details>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 lg:grid-cols-2 lg:px-8 lg:py-20">
+            <div>
+                <h1 class="text-4xl leading-tight text-bakeli-dark md:text-6xl">
+                    <strong class="block font-extrabold text-bakeli-orange">Recrutez</strong>
+                    <span class="block font-light">Facilement,</span>
+                    <span class="block font-light">collaborez <strong class="font-bold">efficacement</strong></span>
+                </h1>
+
+                <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-600">
+                    Trouvez rapidement les talents dont vous avez besoin et permettez aux étudiants
+                    de travailler sur des projets réels, partout et à tout moment, grâce à notre
+                    plateforme de recrutement complète.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Trouver du travail</a>
+                    <a href="#" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-6 py-3 font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Rejoindre un projet</a>
+                </div>
+
+                <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+                    <div class="flex -space-x-3">
+                        <img src="https://work.bakeli.tech/static/media/user3.5150f53ca4b145ff0914.png" alt="Étudiant Bakeli" class="h-11 w-11 rounded-full border-2 border-white object-cover">
+                        <img src="https://work.bakeli.tech/static/media/user4.6d3ef86517be23fac1e7.png" alt="Étudiant Bakeli" class="h-11 w-11 rounded-full border-2 border-white object-cover">
+                        <img src="https://work.bakeli.tech/static/media/user2.2d45030cc5b9e8757c49.png" alt="Étudiant Bakeli" class="h-11 w-11 rounded-full border-2 border-white object-cover">
+                    </div>
+                    <p class="text-sm text-gray-600"><strong class="text-lg text-bakeli-dark">5 890+</strong> Etudiants</p>
+                    <p class="flex items-center gap-2 text-sm text-gray-600">
+                        <i class="fa-solid fa-briefcase text-bakeli-orange"></i>
+                        <span><strong class="text-lg text-bakeli-dark">97</strong> Projets</span>
+                    </p>
+                    <p class="flex items-center gap-2 text-sm text-gray-600">
+                        <i class="fa-regular fa-lightbulb text-bakeli-orange"></i>
+                        <span><strong class="text-lg text-bakeli-dark">48</strong> Créativités</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visuel : photo ronde + 3 cartes flottantes -->
+            <div class="relative mx-auto h-[420px] w-full max-w-md" aria-label="Chiffres clés">
+                <span class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-bakeli-orange/40"></span>
+                <span class="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-bakeli-orange/30"></span>
+                <span class="absolute right-6 top-8 h-4 w-4 rounded-full bg-bakeli-orange"></span>
+
+                <div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-bakeli-soft shadow-xl">
+                    <img src="https://work.bakeli.tech/static/media/imgnewdesign.126770952c117a98e7e0.png" alt="Étudiant de Bakeli" class="h-full w-full object-cover">
+                </div>
+
+                <div class="absolute left-0 top-10 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg">
+                    <div class="h-10 w-10 rounded-full border-4 border-bakeli-orange border-r-gray-200"></div>
+                    <div class="leading-tight"><strong class="block text-xl text-bakeli-dark">205</strong><span class="text-xs text-gray-500">Offres Emploi</span></div>
+                </div>
+
+                <div class="absolute bottom-10 left-2 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg">
+                    <i class="fa-regular fa-file-lines text-2xl text-bakeli-orange"></i>
+                    <div class="leading-tight"><strong class="block text-xl text-bakeli-dark">97</strong><span class="text-xs text-gray-500">Projets réalisés</span></div>
+                </div>
+
+                <div class="absolute bottom-24 right-0 flex items-center gap-3 rounded-xl bg-bakeli-orange px-4 py-3 text-white shadow-lg">
+                    <i class="fa-regular fa-file-lines text-2xl"></i>
+                    <div class="leading-tight"><strong class="block text-xl">5890+</strong><span class="text-xs">Etudiants</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= POURQUOI NOUS CHOISIR (carrousel) ================= -->
+        <section class="bg-bakeli-soft py-16">
+            <div class="mx-auto max-w-7xl px-4 lg:px-8">
+                <h2 class="text-center text-3xl font-bold text-bakeli-dark">Pourquoi nous choisir ?</h2>
+
+                <div class="mt-10 overflow-hidden">
+                    <div id="track" class="flex transition-transform duration-500">
+
+                        <!-- Groupe 1 -->
+                        <div class="w-full shrink-0 px-1">
+                            <div class="grid gap-6 md:grid-cols-3">
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-solid fa-graduation-cap"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Stages garantis</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Accédez à des opportunités de stages gratuite dans des startups innovante</p>
+                                </article>
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-solid fa-briefcase"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Projets concrets</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Travaillez sur de vrais projets qui impactent des milliers professionnelles</p>
+                                </article>
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-solid fa-user-group"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Talents pré-qualifiés</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Accédez à plus de 1000 étudiants talentueux, évalués par nos experts</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Groupe 2 -->
+                        <div class="w-full shrink-0 px-1">
+                            <div class="grid gap-6 md:grid-cols-3">
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-solid fa-award"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Certification reconnue</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Obtenez des certifications valorisées par les employeur.</p>
+                                </article>
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-regular fa-clock"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Recrutement rapide</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Trouvez votre équipe en moins de 48h grâce à notre processus de matching intelligent</p>
+                                </article>
+                                <article class="rounded-2xl bg-white p-6 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-bakeli-soft text-xl text-bakeli-orange"><i class="fa-solid fa-shield-halved"></i></div>
+                                        <h3 class="text-lg font-bold text-bakeli-dark">Garantie qualité</h3>
+                                    </div>
+                                    <p class="mt-4 text-sm leading-relaxed text-gray-600">Satisfaction garantie ou remboursé. Nos talents sont accompagnés tout au long du projet</p>
+                                </article>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Les points sont créés par le JavaScript -->
+                <div id="dots" class="mt-8 flex justify-center gap-2"></div>
+            </div>
+        </section>
+
+        <!-- ================= OPPORTUNITÉ : ENTREPRISES ================= -->
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div class="grid items-center gap-10 lg:grid-cols-2">
+                <img class="w-full rounded-2xl object-cover" src="images/image4.jpg" alt="Une étudiante présente un projet à son équipe">
+
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Entreprises, Entrepreneurs</p>
+                    <span class="mt-2 block h-1 w-16 rounded bg-bakeli-orange"></span>
+                    <h2 class="mt-4 text-3xl font-bold leading-tight text-bakeli-dark">
+                        Partagez votre opportunité,<br class="hidden md:block">
+                        découvrez le talent de demain
+                    </h2>
+                    <p class="mt-4 leading-relaxed text-gray-600">
+                        Soumettez une offre d'emploi ou un projet et laissez nos étudiants qualifiés
+                        apporter leurs idées et compétences pour faire grandir votre initiative.
+                    </p>
+                    <a href="#" class="mt-6 inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Soumettez un projet</a>
+                </div>
+            </div>
+
+            <div class="mt-12 grid gap-6 md:grid-cols-3">
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">12k+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Étudiants</h3>
+                    <p class="mt-1 text-sm text-gray-600">Étudiants talentueux disponibles sur notre plateforme</p>
+                </div>
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">20k+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Concours ou challenges étudiants</h3>
+                    <p class="mt-1 text-sm text-gray-600">Mettre les talents à l'épreuve avec des mini-projets.</p>
+                </div>
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">18k+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Ateliers pratiques</h3>
+                    <p class="mt-1 text-sm text-gray-600">Pour partager le savoir-faire et détecter de futurs talents.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OPPORTUNITÉ : ÉTUDIANTS ================= -->
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div class="grid items-center gap-10 lg:grid-cols-2">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Étudiants</p>
+                    <span class="mt-2 block h-1 w-16 rounded bg-bakeli-orange"></span>
+                    <h2 class="mt-4 text-3xl font-bold leading-tight text-bakeli-dark">
+                        Travaillez sur des projets réels et<br class="hidden md:block">
+                        trouvez des stages et opportunités
+                    </h2>
+                    <p class="mt-4 leading-relaxed text-gray-600">
+                        Développez vos compétences en participant à des missions concrètes et accédez
+                        facilement à des offres adaptées à votre profil.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-4">
+                        <a href="#" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Trouver du travail</a>
+                        <a href="#" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-6 py-3 font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Participer à un projet</a>
+                    </div>
+                </div>
+
+                <img class="w-full rounded-2xl object-cover" src="https://work.bakeli.tech/static/media/hero-etudiant.803534fd125d224a0f46.jpg" alt="Deux étudiants travaillent sur des documents autour d'une table">
+            </div>
+
+            <div class="mt-12 grid gap-6 md:grid-cols-3">
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">19k+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Offres</h3>
+                    <p class="mt-1 text-sm text-gray-600">Trouvez facilement des stages et opportunités</p>
+                </div>
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">10k+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Projets réels</h3>
+                    <p class="mt-1 text-sm text-gray-600">Participez à des missions réelles proposées par des entrepreneurs et entreprises.</p>
+                </div>
+                <div class="rounded-2xl bg-bakeli-soft p-6 text-center">
+                    <strong class="text-4xl font-extrabold text-bakeli-orange">20+</strong>
+                    <h3 class="mt-2 font-bold text-bakeli-dark">Étudiants recrutés</h3>
+                    <p class="mt-1 text-sm text-gray-600">20+ étudiants ont trouvé des opportunités réelles via notre plateforme.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJETS ================= -->
+        <section class="bg-bakeli-soft py-16">
+            <div class="mx-auto max-w-7xl px-4 lg:px-8">
+                <div class="flex flex-wrap items-end justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Projets</p>
+                        <h2 class="mt-1 text-3xl font-bold text-bakeli-dark">Découvrez les dernières <span class="text-bakeli-orange">opportunités</span></h2>
+                    </div>
+                    <a href="#" class="font-semibold text-bakeli-orange hover:underline">Tout afficher &rarr;</a>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Les 3 cartes de projets n'étaient pas dans le fichier d'origine.
+                         Modèle à copier 3 fois :
+
+                    <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm">
+                        <h3 class="text-lg font-bold text-bakeli-dark">Titre du projet</h3>
+                        <p class="mt-2 text-sm text-gray-600">Description courte du projet.</p>
+                        <a href="#" class="mt-auto pt-4 font-semibold text-bakeli-orange hover:underline">Voir le projet &rarr;</a>
+                    </article>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TÉMOINS (carte du monde) ================= -->
+        <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8">
+            <h2 class="text-center text-3xl font-bold leading-snug text-bakeli-dark">
+                Ils ont choisi Bakeli<br>pour grandir,<br>collaborer et réussir.
+            </h2>
+
+            <!-- Mobile : grille. À partir de md : les témoins sont posés sur la carte -->
+            <div class="relative mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 md:block">
+                <img class="hidden w-full opacity-60 md:block" src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="">
+
+                <article class="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-lg md:absolute md:left-[6%] md:top-[12%] md:w-44">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ndeye Awa NDIAYE">
+                    <strong class="mt-2 text-sm text-bakeli-dark">Ndeye Awa NDIAYE</strong>
+                    <span class="text-xs text-gray-500">Développeuse Fullstack</span>
+                    <div class="mt-1 text-xs text-orange-400" aria-label="4 étoiles sur 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+                    </div>
+                </article>
+
+                <article class="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-lg md:absolute md:left-[34%] md:top-[4%] md:w-44">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/36.jpg" alt="Mbaye SECK">
+                    <strong class="mt-2 text-sm text-bakeli-dark">Mbaye SECK</strong>
+                    <span class="text-xs text-gray-500">Développeur Fullstack</span>
+                    <div class="mt-1 text-xs text-orange-400" aria-label="4 étoiles sur 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+                    </div>
+                </article>
+
+                <article class="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-lg md:absolute md:right-[6%] md:top-[16%] md:w-44">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Gambie DIALLO">
+                    <strong class="mt-2 text-sm text-bakeli-dark">Gambie DIALLO</strong>
+                    <span class="text-xs text-gray-500">UI/UX designer</span>
+                    <div class="mt-1 text-xs text-orange-400" aria-label="4 étoiles sur 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+                    </div>
+                </article>
+
+                <article class="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-lg md:absolute md:bottom-[10%] md:left-[18%] md:w-44">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/60.jpg" alt="Sokhna Fatou Gueye">
+                    <strong class="mt-2 text-sm text-bakeli-dark">Sokhna Fatou Gueye</strong>
+                    <span class="text-xs text-gray-500">Devops</span>
+                    <div class="mt-1 text-xs text-orange-400" aria-label="4 étoiles sur 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+                    </div>
+                </article>
+
+                <article class="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-lg md:absolute md:bottom-[6%] md:right-[22%] md:w-44">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/50.jpg" alt="Mourtalla SYLL">
+                    <strong class="mt-2 text-sm text-bakeli-dark">Mourtalla SYLL</strong>
+                    <span class="text-xs text-gray-500">Développeur Fullstack</span>
+                    <div class="mt-1 text-xs text-orange-400" aria-label="4 étoiles sur 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= AVIS (pile de cartes) ================= -->
+        <section class="bg-bakeli-soft py-16">
+            <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 lg:px-8">
+                <div>
+                    <h2 class="text-3xl font-bold leading-snug text-bakeli-dark">Ce que disent nos Étudiants ?</h2>
+                    <div id="avis-points" class="mt-6 flex gap-2"></div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <!-- Les cartes sont empilées au même endroit (absolute), le JS décale chacune -->
+                    <div id="avis-pile" class="relative h-72 flex-1">
+
+                        <article class="avis-carte absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-500">
+                            <img class="h-16 w-16 rounded-full object-cover" src="images/etudiant1.jpg" alt="Aminata Fall">
+                            <p class="mt-4 text-sm italic text-gray-600">"Grâce à Bakeli, j'ai décroché mon premier stage en développement web."</p>
+                            <h3 class="mt-3 font-bold text-bakeli-dark">Aminata Fall</h3>
+                            <p class="text-xs text-gray-500">Étudiante en développement web</p>
+                        </article>
+
+                        <article class="avis-carte absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-500">
+                            <img class="h-16 w-16 rounded-full object-cover" src="images/etudiant2.jpg" alt="Kwame Asante">
+                            <p class="mt-4 text-sm italic text-gray-600">"Bakeli m'a offert les outils et le réseau pour lancer ma carrière en design. Je recommande vivement !"</p>
+                            <h3 class="mt-3 font-bold text-bakeli-dark">Kwame Asante</h3>
+                            <p class="text-xs text-gray-500">Étudiant en informatique</p>
+                        </article>
+
+                        <article class="avis-carte absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-500">
+                            <img class="h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fatou Ndiaye">
+                            <p class="mt-4 text-sm italic text-gray-600">"Les projets concrets m'ont permis de montrer mes compétences et de gagner du temps dans ma recherche."</p>
+                            <h3 class="mt-3 font-bold text-bakeli-dark">Fatou Ndiaye</h3>
+                            <p class="text-xs text-gray-500">Étudiante en marketing digital</p>
+                        </article>
+
+                        <article class="avis-carte absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-500">
+                            <img class="h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Moussa Ba">
+                            <p class="mt-4 text-sm italic text-gray-600">"Une plateforme simple, des entreprises sérieuses et un vrai accompagnement."</p>
+                            <h3 class="mt-3 font-bold text-bakeli-dark">Moussa Ba</h3>
+                            <p class="text-xs text-gray-500">Étudiant en réseaux</p>
+                        </article>
+
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <button type="button" id="avis-haut" aria-label="Témoignage précédent" class="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow transition hover:bg-bakeli-orange hover:text-white"><i class="fa-solid fa-chevron-up"></i></button>
+                        <button type="button" id="avis-bas" aria-label="Témoignage suivant" class="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow transition hover:bg-bakeli-orange hover:text-white"><i class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-bakeli-dark text-gray-300">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-3 lg:px-8">
+            <div class="md:col-span-2">
+                <a class="flex items-center gap-2 text-xl font-bold text-white" href="#">
+                    <i class="fa-solid fa-spinner text-bakeli-orange"></i>
+                    <span>Bakeli Work</span>
+                </a>
+                <p class="mt-4 max-w-2xl text-sm leading-relaxed">
+                    Bakeli Work est un service mis en place par Bakeli pour accompagner les
+                    entrepreneurs dans l'accès à des services digitaux (conception de logos,
+                    affiches, sites web et applications) à des prix très compétitifs et avec
+                    une grande flexibilité. Seuls les Bakelistes sont habilités à postuler
+                    pour réaliser ces prestations.
+                </p>
+            </div>
+
+            <div class="text-sm">
+                <h3 class="text-lg font-bold text-white">Nous contacter</h3>
+                <p class="mt-3">Hlm Grand Yoff Villa n°241 Près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</p>
+                <p class="mt-2">TEL : <a href="tel:+221785461551" class="hover:text-bakeli-orange">+221 78 546 15 51</a></p>
+                <p class="mt-2">MAIL : <a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></p>
+            </div>
+        </div>
+
+        <p class="border-t border-white/10 py-5 text-center text-sm">
+            © Copyright <strong class="text-white">Bakeli 2025.</strong> Tous droits réservés.
+        </p>
+    </footer>
+
+    <script>
+        // ===== 1) Menu "Explorer" =====
+        const btnExplorer = document.getElementById('btn-explorer');
+        const panneau = document.getElementById('panneau');
+
+        function fermer() {
+            panneau.classList.add('hidden');
+            btnExplorer.setAttribute('aria-expanded', 'false');
+        }
+
+        btnExplorer.addEventListener('click', (e) => {
+            e.stopPropagation(); // évite que le clic ferme tout de suite le menu
+            const ferme = panneau.classList.toggle('hidden');
+            btnExplorer.setAttribute('aria-expanded', !ferme);
+        });
+
+        document.addEventListener('click', fermer);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') fermer();
+        });
+
+        // ===== 2) Carrousel "Pourquoi nous choisir" =====
+        const track = document.getElementById('track');
+        const dots = document.getElementById('dots');
+        const slides = track.children;
+        let courant = 0;
+
+        // On crée un point par slide
+        for (let i = 0; i < slides.length; i++) {
+            const point = document.createElement('button');
+            point.type = 'button';
+            point.setAttribute('aria-label', 'Aller au groupe ' + (i + 1));
+            point.addEventListener('click', () => allerA(i));
+            dots.appendChild(point);
+        }
+
+        function allerA(i) {
+            courant = i;
+            track.style.transform = 'translateX(-' + (i * 100) + '%)'; // on décale la bande
+            Array.from(dots.children).forEach((point, index) => {
+                const actif = index === i;
+                point.className = 'h-2 rounded-full transition-all ' + (actif ? 'w-6 bg-orange-500' : 'w-2 bg-gray-300');
+            });
+        }
+
+        allerA(0);
+        setInterval(() => allerA((courant + 1) % slides.length), 5000); // défilement auto
+
+        // ===== 3) Pile d'avis =====
+        const cartes = document.querySelectorAll('.avis-carte');
+        const avisPoints = document.getElementById('avis-points');
+        let avisCourant = 0;
+
+        // Un point par avis
+        cartes.forEach((_, i) => {
+            const point = document.createElement('button');
+            point.type = 'button';
+            point.setAttribute('aria-label', 'Avis ' + (i + 1));
+            point.addEventListener('click', () => afficherAvis(i));
+            avisPoints.appendChild(point);
+        });
+
+        function afficherAvis(i) {
+            avisCourant = (i + cartes.length) % cartes.length; // revient au début / à la fin
+
+            cartes.forEach((carte, index) => {
+                // "rang" = distance entre cette carte et la carte affichée (0 = devant)
+                const rang = (index - avisCourant + cartes.length) % cartes.length;
+
+                carte.style.zIndex = 30 - rang;
+                carte.style.transform = 'translateY(' + (rang * 14) + 'px) scale(' + (1 - rang * 0.05) + ')';
+                carte.style.opacity = rang === 0 ? 1 : (rang < 3 ? 0.6 - rang * 0.15 : 0);
+            });
+
+            Array.from(avisPoints.children).forEach((point, index) => {
+                point.className = 'h-2 rounded-full transition-all ' + (index === avisCourant ? 'w-6 bg-orange-500' : 'w-2 bg-gray-300');
+            });
+        }
+
+        document.getElementById('avis-haut').addEventListener('click', () => afficherAvis(avisCourant - 1));
+        document.getElementById('avis-bas').addEventListener('click', () => afficherAvis(avisCourant + 1));
+
+        afficherAvis(0);
+    </script>
+</body>
+</html>

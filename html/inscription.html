@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription | Bakeli School of Technology</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+
+      <a href="index.html" class="shrink-0">
+        <img src="https://www.bakeli.tech/build/assets/logo-4ddf30fa.png" alt="Bakeli School of Technology" class="h-10 w-auto">
+      </a>
+
+      <nav class="hidden lg:block" aria-label="Menu principal">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <li>
+                <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                  <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.bakeli.tech/formations/formations-diplomantes" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                  <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                  <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <li>
+                <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                  <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                  <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="https://www.bakeli.tech/nos-coachs" class="hover:text-bakeli-orange">Coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="https://www.bakeli.tech/blog" class="hover:text-bakeli-orange">Blog</a></li>
+          <li><a href="https://www.bakeli.tech/bourses" class="hover:text-bakeli-orange">Bourses</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="hidden lg:inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+        <a href="inscription.html" class="hidden lg:inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+
+        <details class="relative lg:hidden">
+          <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+          <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+            <ul class="space-y-3 font-medium">
+              <li><a href="index.html">Accueil</a></li>
+              <li>Formations</li>
+              <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+              <li><a href="https://www.bakeli.tech/formations/formations-diplomantes" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+              <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+              <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+              <li><a href="https://www.bakeli.tech/nos-coachs">Coachs</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="https://www.bakeli.tech/blog">Blog</a></li>
+              <li><a href="https://www.bakeli.tech/bourses">Bourses</a></li>
+            </ul>
+            <div class="mt-5 flex flex-col gap-3">
+              <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+              <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= TITRE ================= -->
+    <section class="bg-bakeli-soft py-14">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 text-center">
+        <h1 class="text-4xl font-extrabold text-bakeli-dark md:text-5xl">Rejoignez <span class="text-bakeli-orange">Bakeli</span></h1>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">Remplissez le formulaire ci-dessous. Un conseiller vous contactera pour confirmer votre inscription et vous aider à choisir la formation adaptée à votre profil.</p>
+      </div>
+    </section>
+
+    <!-- ================= FORMULAIRE ================= -->
+    <section class="mx-auto max-w-7xl px-4 lg:px-8 py-16">
+      <div class="grid gap-10 lg:grid-cols-3">
+
+        <!-- Formulaire -->
+        <!-- action="#" : le formulaire n'envoie rien pour l'instant. Il faudra le brancher à un service (Formspree, etc.) -->
+        <form action="#" method="post" class="space-y-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm lg:col-span-2 lg:p-8">
+
+          <!-- 1. Informations personnelles -->
+          <fieldset>
+            <legend class="text-xl font-bold text-bakeli-dark">1. Vos informations</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="prenom" class="block text-sm font-semibold text-gray-700">Prénom *</label>
+                <input id="prenom" name="prenom" type="text" required autocomplete="given-name" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+              </div>
+              <div>
+                <label for="nom" class="block text-sm font-semibold text-gray-700">Nom *</label>
+                <input id="nom" name="nom" type="text" required autocomplete="family-name" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700">Email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+              </div>
+              <div>
+                <label for="telephone" class="block text-sm font-semibold text-gray-700">Téléphone / WhatsApp *</label>
+                <input id="telephone" name="telephone" type="tel" required placeholder="+221 7X XXX XX XX" autocomplete="tel" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+              </div>
+              <div class="sm:col-span-2">
+                <label for="ville" class="block text-sm font-semibold text-gray-700">Ville de résidence</label>
+                <input id="ville" name="ville" type="text" autocomplete="address-level2" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 2. Profil -->
+          <fieldset>
+            <legend class="text-xl font-bold text-bakeli-dark">2. Votre profil</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="niveau" class="block text-sm font-semibold text-gray-700">Vous avez le niveau *</label>
+                <select id="niveau" name="niveau" required class="mt-1 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+                  <option value="">Choisir...</option>
+                  <option>BFEM ou équivalent</option>
+                  <option>Baccalauréat</option>
+                  <option>Bac +2 (DUT, BTS...)</option>
+                  <option>Licence</option>
+                  <option>Master ou plus</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div>
+                <label for="situation" class="block text-sm font-semibold text-gray-700">Situation actuelle *</label>
+                <select id="situation" name="situation" required class="mt-1 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+                  <option value="">Choisir...</option>
+                  <option>Élève / Étudiant</option>
+                  <option>Salarié</option>
+                  <option>En recherche d'emploi</option>
+                  <option>Entrepreneur</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 3. Formation -->
+          <fieldset>
+            <legend class="text-xl font-bold text-bakeli-dark">3. Votre formation</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div class="sm:col-span-2">
+                <label for="formation" class="block text-sm font-semibold text-gray-700">Choisissez une formation *</label>
+                <select id="formation" name="formation" required class="mt-1 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30">
+                  <option value="">Choisir...</option>
+                  <option>Développement web et mobile</option>
+                  <option>Marketing et Communication digitale</option>
+                  <option>Informatique de Gestion</option>
+                  <option>Webmaster &amp; Réseaux Sociaux</option>
+                  <option>Infographie</option>
+                  <option>Secrétariat Bureautique</option>
+                  <option>Assistant de Gestion de PME/PMI</option>
+                </select>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-gray-700">Type de formation *</p>
+                <div class="mt-2 space-y-2 text-sm">
+                  <label class="flex items-center gap-2"><input type="radio" name="type" value="certifiante" required class="accent-orange-500"> Certifiante (6 à 12 mois)</label>
+                  <label class="flex items-center gap-2"><input type="radio" name="type" value="diplomante" class="accent-orange-500"> Diplômante (24 mois)</label>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-gray-700">Mode de suivi *</p>
+                <div class="mt-2 space-y-2 text-sm">
+                  <label class="flex items-center gap-2"><input type="radio" name="mode" value="en-ligne" required class="accent-orange-500"> En ligne</label>
+                  <label class="flex items-center gap-2"><input type="radio" name="mode" value="presentiel" class="accent-orange-500"> En présentiel</label>
+                </div>
+              </div>
+
+              <label class="flex items-start gap-2 rounded-lg bg-bakeli-soft p-4 text-sm sm:col-span-2">
+                <input type="checkbox" name="bourse" class="mt-1 accent-orange-500">
+                <span>Je souhaite candidater à la <strong>bourse Volkeno</strong> (70% des frais de formation couverts).</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- 4. Message -->
+          <fieldset>
+            <legend class="text-xl font-bold text-bakeli-dark">4. Un message ? <span class="text-sm font-normal text-gray-500">(facultatif)</span></legend>
+            <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de votre projet ou posez-nous vos questions" class="mt-5 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:border-bakeli-orange focus:outline-none focus:ring-2 focus:ring-bakeli-orange/30"></textarea>
+          </fieldset>
+
+          <label class="flex items-start gap-2 text-sm text-gray-600">
+            <input type="checkbox" name="consentement" required class="mt-1 accent-orange-500">
+            <span>J'accepte d'être contacté(e) par Bakeli au sujet de mon inscription. *</span>
+          </label>
+
+          <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600 sm:w-auto">Envoyer mon inscription</button>
+        </form>
+
+        <!-- Colonne d'aide -->
+        <aside class="space-y-6">
+          <div class="rounded-2xl bg-bakeli-soft p-6">
+            <h2 class="text-lg font-bold text-bakeli-dark">Besoin d'aide pour choisir ?</h2>
+            <p class="mt-2 text-sm text-gray-600">Un conseiller vous aide à trouver la formation adaptée à votre profil.</p>
+            <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="mt-4 inline-flex items-center justify-center rounded-full bg-green-500 px-5 py-2 text-sm font-semibold text-white hover:bg-green-600">Écrire sur WhatsApp</a>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-6 text-sm">
+            <h2 class="text-lg font-bold text-bakeli-dark">Nous contacter</h2>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+              <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+              <li>Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-100 text-gray-700">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+      <div>
+        <img src="https://www.bakeli.tech/build/assets/logo-4ddf30fa.png" alt="Bakeli" class="h-10 w-auto">
+        <p class="mt-4 text-sm leading-relaxed">
+          Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+          Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+          <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li><a href="https://www.bakeli.tech/nos-coachs" class="hover:text-bakeli-orange">Nos coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="https://www.bakeli.tech/blog" class="hover:text-bakeli-orange">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+          <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+          <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
+    <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
+  </a>
+
+</body>
+</html>
